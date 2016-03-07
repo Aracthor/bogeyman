@@ -9,6 +9,13 @@ if (NOT CONFIGURED_ONCE)
     CACHE STRING "Flags used by the compiler during all build types." FORCE)
 endif()
 
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR
+   "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+ set(warnings "-Wall -Wextra -Werror")
+elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+  set(warnings "/W4 /WX /EHsc")
+endif()
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNDEBUG")  
 
 
