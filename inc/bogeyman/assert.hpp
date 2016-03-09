@@ -3,6 +3,7 @@
 
 # ifdef NDEBUG
 
+#  include "bogeyman/options.hpp"
 #  include "bogeyman/internal/print_error_line.hpp"
 #  include "bogeyman/internal/action_on_failure.hpp"
 
