@@ -1,0 +1,4 @@
+#include "bogeyman/options.hpp"
+#define _BOGEYMAN_ACTION_ON_FAILURE	BOGEYMAN_ABORT_ON_FAILURE
+#define _BOGEYMAN_PRINT_ERROR_LINE	BOGEYMAN_PRINT_ERROR_LINE_TO_OUTPUT
+#include "additions.cpp"
